@@ -1,32 +1,52 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OutlinePresenter : MonoBehaviour
 {
-    [SerializeField] private SelectableValue _selectedValue;
+    [SerializeField] private SelectableValue _selectable;
+    
+    private Outline[] _outlineSelectors;
+    private ISelecatable _currentSelectable;
 
     private void Start()
     {
-        _selectedValue.OnSelected += SelectObject;
-        SelectObject(_selectedValue.CurrentValue);
+        _selectable.OnSelected += OnSelected;
+        OnSelected(_selectable.CurrentValue);
     }
 
-    private void SelectObject (ISelecatable unit)
+    private void OnSelected(ISelecatable selectable)
     {
-        if (unit != null) {
+        if (_currentSelectable == selectable)
+        {
+            return;
+        }
 
-            if (!unit.GameObject.TryGetComponent(out Outline outline))
+        _currentSelectable = selectable;
+        SetSelected(_outlineSelectors, false);
+        _outlineSelectors = null;
+
+        if (selectable != null)
+        {
+            _outlineSelectors = (selectable as Component).GetComponentsInParent<Outline>();
+            SetSelected(_outlineSelectors, true);
+        }
+    }
+
+    static void SetSelected(Outline[] selectors, bool value)
+    {
+        if (selectors != null)
+        {
+            for (int i = 0; i < selectors.Length; i++)
             {
-                outline = unit.GameObject.AddComponent<Outline>();
+                selectors[i].OutlineMode = value ? Outline.Mode.OutlineVisible : Outline.Mode.OutlineHidden;
+                selectors[i].OutlineColor = Color.green;
+                selectors[i].OutlineWidth = 3;
             }
-
-            outline.OutlineMode = Outline.Mode.OutlineVisible;
-            outline.OutlineColor = Color.green;
-            outline.OutlineWidth = 3;
         }
     }
 
     private void OnDestroy()
     {
-        _selectedValue.OnSelected -= SelectObject;
+        _selectable.OnSelected -= OnSelected;
     }
 }

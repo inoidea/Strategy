@@ -56,7 +56,12 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\UserControlSystem\SelectableValue.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\ProduceUnitCommand.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\AttackCommand.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\StopCommand.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\MoveCommand.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\PatrolCommand.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\ProduceUnitCommandHeir.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\UserControlSystem\UserControlSystem.asmdef" />
@@ -736,6 +741,10 @@
     <ProjectReference Include="Abstractions.csproj">
       <Project>{1C3F8595-E5AF-1903-76E3-15BA29D1F3B2}</Project>
       <Name>Abstractions</Name>
+    </ProjectReference>
+    <ProjectReference Include="Utils.csproj">
+      <Project>{9D04EA97-FBCD-91DA-AB89-B80393FD686A}</Project>
+      <Name>Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

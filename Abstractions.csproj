@@ -56,8 +56,15 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Abstractions\IUnitProducer.cs" />
     <Compile Include="Assets\Scripts\Abstractions\ISelecatable.cs" />
+    <Compile Include="Assets\Scripts\Abstractions\ICommandExecutor.cs" />
+    <Compile Include="Assets\Scripts\Abstractions\CommandExecutorBase.cs" />
+    <Compile Include="Assets\Scripts\Abstractions\ICommand.cs" />
+    <Compile Include="Assets\Scripts\Abstractions\IProduceUnitCommand.cs" />
+    <Compile Include="Assets\Scripts\Abstractions\IAttackCommand.cs" />
+    <Compile Include="Assets\Scripts\Abstractions\IMoveCommand.cs" />
+    <Compile Include="Assets\Scripts\Abstractions\IPatrolCommand.cs" />
+    <Compile Include="Assets\Scripts\Abstractions\IStopCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Abstractions\Abstractions.asmdef" />

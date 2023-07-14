@@ -56,9 +56,10 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\MouseInteractionsPresenter.cs" />
     <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\BottomLefPresenter.cs" />
     <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\OutlinePresenter.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\MouseInteractionsPresenter.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\CommandButtonsPresenter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\UserControlSystem\UI\Presenter\UIPresenter.asmdef" />
@@ -739,6 +740,10 @@
       <Project>{576FB835-71E9-C313-0C80-CCA92A7D2693}</Project>
       <Name>UIModel</Name>
     </ProjectReference>
+    <ProjectReference Include="UIView.csproj">
+      <Project>{0E289D2E-4627-DECC-CC29-74491D28020F}</Project>
+      <Name>UIView</Name>
+    </ProjectReference>
     <ProjectReference Include="Abstractions.csproj">
       <Project>{1C3F8595-E5AF-1903-76E3-15BA29D1F3B2}</Project>
       <Name>Abstractions</Name>
@@ -746,6 +751,14 @@
     <ProjectReference Include="Outline.csproj">
       <Project>{86C850E7-1D80-68AA-1342-838D2A576CBD}</Project>
       <Name>Outline</Name>
+    </ProjectReference>
+    <ProjectReference Include="UserControlSystem.csproj">
+      <Project>{D940C225-BF1D-D016-B4D7-1FA8650A15A4}</Project>
+      <Name>UserControlSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="Utils.csproj">
+      <Project>{9D04EA97-FBCD-91DA-AB89-B80393FD686A}</Project>
+      <Name>Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

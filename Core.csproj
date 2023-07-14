@@ -58,6 +58,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Core\MainBuilding.cs" />
     <Compile Include="Assets\Scripts\Core\Unit.cs" />
+    <Compile Include="Assets\Scripts\Core\CommandExecutors\AttackCommandExecutor.cs" />
+    <Compile Include="Assets\Scripts\Core\CommandExecutors\StopCommandExecutor.cs" />
+    <Compile Include="Assets\Scripts\Core\CommandExecutors\MoveCommandExecutor.cs" />
+    <Compile Include="Assets\Scripts\Core\CommandExecutors\PatrolCommandExecutor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Core\Core.asmdef" />
