@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class CommandButtonsView : MonoBehaviour
 {
+    public Action<ICommandExecutor> OnClick;
+
     [SerializeField] private GameObject _attackButton;
     [SerializeField] private GameObject _moveButton;
     [SerializeField] private GameObject _patrolButton;
     [SerializeField] private GameObject _stopButton;
     [SerializeField] private GameObject _produceUnitButton;
-
-    public Action<ICommandExecutor> OnClick;
 
     private Dictionary<Type, GameObject> _buttonsByExecutorType;
 
@@ -26,21 +26,39 @@ public class CommandButtonsView : MonoBehaviour
         _buttonsByExecutorType.Add(typeof(CommandExecutorBase<IProduceUnitCommand>), _produceUnitButton);
     }
 
+    public void BlockInteractions(ICommandExecutor ce)
+    {
+        UnblockAllInteractions();
+        GetButtonGameObjectByType(ce.GetType())
+        .GetComponent<Selectable>().interactable = false;
+    }
+
+    public void UnblockAllInteractions() => SetInteractible(true);
+
+    private void SetInteractible(bool value)
+    {
+        _attackButton.GetComponent<Selectable>().interactable = value;
+        _moveButton.GetComponent<Selectable>().interactable = value;
+        _patrolButton.GetComponent<Selectable>().interactable = value;
+        _stopButton.GetComponent<Selectable>().interactable = value;
+        _produceUnitButton.GetComponent<Selectable>().interactable = value;
+    }
+
     public void MakeLayout(IEnumerable<ICommandExecutor> commandExecutors)
     {
         foreach (var currentExecutor in commandExecutors)
         {
-            var buttonGameObject = _buttonsByExecutorType
-            .Where(type => type
-            .Key
-            .IsAssignableFrom(currentExecutor.GetType())
-            )
-            .First()
-            .Value;
+            var buttonGameObject = GetButtonGameObjectByType(currentExecutor.GetType());
             buttonGameObject.SetActive(true);
+
             var button = buttonGameObject.GetComponent<Button>();
             button.onClick.AddListener(() => OnClick?.Invoke(currentExecutor));
         }
+    }
+
+    private GameObject GetButtonGameObjectByType(Type executorInstanceType)
+    {
+        return _buttonsByExecutorType.Where(type => type.Key.IsAssignableFrom(executorInstanceType)).First().Value;
     }
 
     public void Clear()

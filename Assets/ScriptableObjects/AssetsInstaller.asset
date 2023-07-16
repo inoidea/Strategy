@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2623fae07d66e0459d4e4e89cadb8ee, type: 3}
+  m_Name: AssetsInstaller
+  m_EditorClassIdentifier: 
+  _legacyContext: {fileID: 11400000, guid: 994616d0686974249ac50e34f57f2477, type: 2}
+  _groundClicksRMB: {fileID: 11400000, guid: c48a265d68a15fc49a97224d22a704be, type: 2}
+  _attackableClicksRMB: {fileID: 11400000, guid: 38606f32b3234ec4c8cf3329f5d77952, type: 2}
+  _selectables: {fileID: 11400000, guid: 645f64d5cdeef3345a8cad65b90681be, type: 2}

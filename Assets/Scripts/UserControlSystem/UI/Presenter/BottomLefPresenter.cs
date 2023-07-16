@@ -14,11 +14,11 @@ public class BottomLefPresenter : MonoBehaviour
 
     private void Start()
     {
-        _selectedValue.OnSelected += onSelected;
-        onSelected(_selectedValue.CurrentValue);
+        _selectedValue.OnNewValue += OnNewValue;
+        OnNewValue(_selectedValue.CurrentValue);
     }
 
-    private void onSelected(ISelecatable selected)
+    private void OnNewValue(ISelecatable selected)
     {
         _selectedImage.enabled = selected != null;
         _healthSlider.gameObject.SetActive(selected != null);
@@ -40,6 +40,6 @@ public class BottomLefPresenter : MonoBehaviour
 
     private void OnDestroy()
     {
-        _selectedValue.OnSelected -= onSelected;
+        _selectedValue.OnNewValue -= OnNewValue;
     }
 }

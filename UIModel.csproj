@@ -57,6 +57,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\UserControlSystem\UI\Model\SelectableValue.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\UI\Model\CommandCreators\CommandCreatorBase.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\UI\Model\CommandCreators\ProduceUnitCommandCreator.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\UI\Model\CommandCreators\PatrolCommandCreator.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\UI\Model\CommandCreators\AttackCommandCreator.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\UI\Model\CommandCreators\MoveCommandCreator.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\UI\Model\CommandCreators\StopCommandCreator.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\UI\Model\CommandButtonsModel.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\UI\Model\UiModelInstaller.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\UI\Model\Vector3Value.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\UI\Model\AttackableValue.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\UserControlSystem\UI\Model\UIModel.asmdef" />
@@ -349,6 +359,21 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject-usage">
+      <HintPath>Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -733,6 +758,18 @@
     <ProjectReference Include="Abstractions.csproj">
       <Project>{1C3F8595-E5AF-1903-76E3-15BA29D1F3B2}</Project>
       <Name>Abstractions</Name>
+    </ProjectReference>
+    <ProjectReference Include="UserControlSystem.csproj">
+      <Project>{D940C225-BF1D-D016-B4D7-1FA8650A15A4}</Project>
+      <Name>UserControlSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="Utils.csproj">
+      <Project>{9D04EA97-FBCD-91DA-AB89-B80393FD686A}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject.csproj">
+      <Project>{E87552AA-F639-666A-E904-B925EDB689DC}</Project>
+      <Name>Zenject</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

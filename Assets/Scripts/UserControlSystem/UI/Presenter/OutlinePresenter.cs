@@ -10,11 +10,11 @@ public class OutlinePresenter : MonoBehaviour
 
     private void Start()
     {
-        _selectable.OnSelected += OnSelected;
-        OnSelected(_selectable.CurrentValue);
+        _selectable.OnNewValue += OnNewValue;
+        OnNewValue(_selectable.CurrentValue);
     }
 
-    private void OnSelected(ISelecatable selectable)
+    private void OnNewValue(ISelecatable selectable)
     {
         if (_currentSelectable == selectable)
         {
@@ -47,6 +47,6 @@ public class OutlinePresenter : MonoBehaviour
 
     private void OnDestroy()
     {
-        _selectable.OnSelected -= OnSelected;
+        _selectable.OnNewValue -= OnNewValue;
     }
 }
