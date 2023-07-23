@@ -1,6 +1,9 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
+using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 public class BottomLefPresenter : MonoBehaviour
 {
@@ -10,12 +13,11 @@ public class BottomLefPresenter : MonoBehaviour
     [SerializeField] private Image _sliderBackground;
     [SerializeField] private Image _sliderFillImage;
 
-    [SerializeField] private SelectableValue _selectedValue;
+    [Inject] private IObservable<ISelecatable> _selectedValues;
 
     private void Start()
     {
-        _selectedValue.OnNewValue += OnNewValue;
-        OnNewValue(_selectedValue.CurrentValue);
+        _selectedValues.Subscribe(OnNewValue);
     }
 
     private void OnNewValue(ISelecatable selected)
@@ -36,10 +38,5 @@ public class BottomLefPresenter : MonoBehaviour
             _sliderBackground.color = color * 0.5f;
             _sliderFillImage.color = color;
         }
-    }
-
-    private void OnDestroy()
-    {
-        _selectedValue.OnNewValue -= OnNewValue;
     }
 }

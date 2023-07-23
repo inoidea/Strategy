@@ -892,6 +892,10 @@
       <Project>{9D04EA97-FBCD-91DA-AB89-B80393FD686A}</Project>
       <Name>Utils</Name>
     </ProjectReference>
+    <ProjectReference Include="UniRx.csproj">
+      <Project>{90571F2E-73DD-13BF-3FFE-910FF75A1743}</Project>
+      <Name>UniRx</Name>
+    </ProjectReference>
     <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
       <Project>{2185A7FA-2931-A840-478C-24FFF1368A62}</Project>
       <Name>Zenject-ReflectionBaking-Editor</Name>

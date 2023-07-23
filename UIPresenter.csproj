@@ -57,6 +57,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\BottomLefPresenter.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\MenuPresenter.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\TopPanelPresenter.cs" />
     <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\OutlinePresenter.cs" />
     <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\MouseInteractionsPresenter.cs" />
     <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\CommandButtonsPresenter.cs" />
@@ -774,6 +776,10 @@
     <ProjectReference Include="Utils.csproj">
       <Project>{9D04EA97-FBCD-91DA-AB89-B80393FD686A}</Project>
       <Name>Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniRx.csproj">
+      <Project>{90571F2E-73DD-13BF-3FFE-910FF75A1743}</Project>
+      <Name>UniRx</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

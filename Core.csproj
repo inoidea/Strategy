@@ -59,9 +59,11 @@
     <Compile Include="Assets\Scripts\Core\CommandExecutors\AttackCommandExecutor.cs" />
     <Compile Include="Assets\Scripts\Core\UnitMovementStop.cs" />
     <Compile Include="Assets\Scripts\Core\CommandExecutors\PatrolCommandExecutor.cs" />
+    <Compile Include="Assets\Scripts\Core\TimeModel.cs" />
     <Compile Include="Assets\Scripts\Core\MainBuilding.cs" />
     <Compile Include="Assets\Scripts\Core\CommandExecutors\StopCommandExecutor.cs" />
     <Compile Include="Assets\Scripts\Core\CommandExecutors\MoveCommandExecutor.cs" />
+    <Compile Include="Assets\Scripts\Core\CoreInstaller.cs" />
     <Compile Include="Assets\Scripts\Core\Unit.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -758,6 +760,14 @@
     <ProjectReference Include="Utils.csproj">
       <Project>{9D04EA97-FBCD-91DA-AB89-B80393FD686A}</Project>
       <Name>Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniRx.csproj">
+      <Project>{90571F2E-73DD-13BF-3FFE-910FF75A1743}</Project>
+      <Name>UniRx</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject.csproj">
+      <Project>{E87552AA-F639-666A-E904-B925EDB689DC}</Project>
+      <Name>Zenject</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

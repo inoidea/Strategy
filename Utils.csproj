@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Utils\IAwaiter.cs" />
     <Compile Include="Assets\Scripts\Utils\AssetsInjector\InjectAssetAttribute.cs" />
     <Compile Include="Assets\Scripts\Utils\AwaiterBase.cs" />
+    <Compile Include="Assets\Scripts\Utils\UniRxExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Utils\Utils.asmdef" />
@@ -751,6 +752,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="UniRx.csproj">
+      <Project>{90571F2E-73DD-13BF-3FFE-910FF75A1743}</Project>
+      <Name>UniRx</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
