@@ -137,6 +137,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _agent: {fileID: 6279612133892001133}
+  _collisionDetector: {fileID: 0}
+  _throttleFrames: 60
+  _continuityThreshold: 10
 --- !u!114 &-215507051280989506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,6 +155,9 @@ MonoBehaviour:
   _maxHealth: 1000
   _icon: {fileID: 21300000, guid: f7409d6a91144354bb70f81e910e5c75, type: 3}
   _pivotPoint: {fileID: 3074657719725199962}
+  _animator: {fileID: 0}
+  _stopCommand: {fileID: 0}
+  _damage: 25
 --- !u!114 &26905274042260847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,6 +202,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a652b66d4544b1a498baeb49d90c8e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2149990500059418680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3074657719725428346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6059a728edbc29545b8f2746ec193d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2729183796374397302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,6 +232,19 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &3510820430907534650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3074657719725428346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f65a863951ed2104b8fee388cda91d01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _factionId: 0
 --- !u!114 &4839734807050055345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8cd321709a9e6c42b0b3d3535a73dfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 0}
+  _stopCommandExecutor: {fileID: 0}
 --- !u!195 &6279612133892001133
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -260,7 +293,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &2149990500059418680
+--- !u!114 &1446734347205610229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -269,7 +302,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3074657719725428346}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6059a728edbc29545b8f2746ec193d10, type: 3}
+  m_Script: {fileID: 11500000, guid: 32f2015116b8d134bb58ec3cc292836c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!95 &3074657719734828472 stripped

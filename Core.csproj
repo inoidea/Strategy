@@ -60,20 +60,23 @@
     <Compile Include="Assets\Scripts\Core\UnitProductionTask.cs" />
     <Compile Include="Assets\Scripts\Core\UnitMovementStop.cs" />
     <Compile Include="Assets\Scripts\Core\CommandExecutors\PatrolCommandExecutor.cs" />
-    <Compile Include="Assets\Scripts\Core\TimeModel.cs" />
-    <Compile Include="Assets\Scripts\Core\MainBuilding\MainBuilding.cs" />
-    <Compile Include="Assets\Scripts\Core\CommandExecutors\StopCommandExecutor.cs" />
-    <Compile Include="Assets\Scripts\Core\CommandExecutors\ProduceUnitCommandExecutor.cs" />
-    <Compile Include="Assets\Scripts\Core\CommandExecutors\MoveCommandExecutor.cs" />
-    <Compile Include="Assets\Scripts\Core\CoreInstaller.cs" />
-    <Compile Include="Assets\Scripts\Core\Chomper\Unit.cs" />
     <Compile Include="Assets\Scripts\Core\CommandExecutors\CommandExecutorBase.cs" />
     <Compile Include="Assets\Scripts\Core\Chomper\ChomperCommandsQueue.cs" />
-    <Compile Include="Assets\Scripts\Core\MainBuilding\MainBuildingCommandQueue.cs" />
+    <Compile Include="Assets\Scripts\Core\TimeModel.cs" />
     <Compile Include="Assets\Scripts\Core\StopCommandCopy.cs" />
+    <Compile Include="Assets\Scripts\Core\MainBuilding\MainBuilding.cs" />
     <Compile Include="Assets\Scripts\Core\CommandExecutors\CommandExecutorsInstaller.cs" />
-    <Compile Include="Assets\Scripts\Core\CommandExecutors\SetRallyPointCommandExecutor.cs" />
+    <Compile Include="Assets\Scripts\Core\CommandExecutors\StopCommandExecutor.cs" />
     <Compile Include="Assets\Scripts\Core\StopAwaiter.cs" />
+    <Compile Include="Assets\Scripts\Core\CommandExecutors\ProduceUnitCommandExecutor.cs" />
+    <Compile Include="Assets\Scripts\Core\CommandExecutors\MoveCommandExecutor.cs" />
+    <Compile Include="Assets\Scripts\Core\CommandExecutors\SetRallyPointCommandExecutor.cs" />
+    <Compile Include="Assets\Scripts\Core\CoreInstaller.cs" />
+    <Compile Include="Assets\Scripts\Core\MainBuilding\MainBuildingCommandQueue.cs" />
+    <Compile Include="Assets\Scripts\Core\Chomper\Unit.cs" />
+    <Compile Include="Assets\Scripts\Core\FactionMember.cs" />
+    <Compile Include="Assets\Scripts\Core\Chomper\ChomperInstaller.cs" />
+    <Compile Include="Assets\Scripts\Core\GameStatus.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Core\Core.asmdef" />

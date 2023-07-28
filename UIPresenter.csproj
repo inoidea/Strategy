@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\OutlinePresenter.cs" />
     <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\MouseInteractionsPresenter.cs" />
     <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\CommandButtonsPresenter.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\GameOverScreenPresenter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\UserControlSystem\UI\Presenter\UIPresenter.asmdef" />

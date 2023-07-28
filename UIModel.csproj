@@ -67,9 +67,9 @@
     <Compile Include="Assets\Scripts\UserControlSystem\UI\Model\CommandCreators\StopCommandCreator.cs" />
     <Compile Include="Assets\Scripts\UserControlSystem\UI\Model\CommandCreators\CommandCreatorBase.cs" />
     <Compile Include="Assets\Scripts\UserControlSystem\UI\Model\CommandCreators\AttackCommandCreator.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\UI\Model\CommandCreators\SetRallyPointCommandCreator.cs" />
     <Compile Include="Assets\Scripts\UserControlSystem\UI\Model\CommandCreators\MoveCommandCreator.cs" />
     <Compile Include="Assets\Scripts\UserControlSystem\UI\Model\AttackableValue.cs" />
-    <Compile Include="Assets\Scripts\UserControlSystem\UI\Model\CommandCreators\SetRallyPointCommandCreator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\UserControlSystem\UI\Model\UIModel.asmdef" />

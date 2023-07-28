@@ -14,4 +14,19 @@ public class MainBuilding : MonoBehaviour, ISelecatable, IAttackable
     public Sprite Icon => _icon;
     public Transform PivotPoint => _pivotPoint;
     public Vector3 RallyPoint { get; set; }
+
+    public void RecieveDamage(int amount)
+    {
+        if (_health <= 0)
+        {
+            return;
+        }
+
+        _health -= amount;
+
+        if (_health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

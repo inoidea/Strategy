@@ -62,9 +62,9 @@
     <Compile Include="Assets\Scripts\Utils\IAwaitable.cs" />
     <Compile Include="Assets\Scripts\Utils\AssetsInjector\AssetsContext.cs" />
     <Compile Include="Assets\Scripts\Utils\IAwaiter.cs" />
+    <Compile Include="Assets\Scripts\Utils\CollisionDetector.cs" />
     <Compile Include="Assets\Scripts\Utils\AssetsInjector\InjectAssetAttribute.cs" />
     <Compile Include="Assets\Scripts\Utils\AwaiterBase.cs" />
-    <Compile Include="Assets\Scripts\Utils\CollisionDetector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Utils\Utils.asmdef" />
