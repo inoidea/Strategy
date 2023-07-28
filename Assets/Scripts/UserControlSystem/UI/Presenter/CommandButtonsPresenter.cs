@@ -6,9 +6,8 @@ using Zenject;
 
 public class CommandButtonsPresenter : MonoBehaviour
 {
-    //[SerializeField] private SelectableValue _selectable;
-    [Inject] private IObservable<ISelecatable> _selectedValues;
     [SerializeField] private CommandButtonsView _view;
+    [Inject] private IObservable<ISelecatable> _selectedValues;
     [Inject] private CommandButtonsModel _model;
 
     private ISelecatable _currentSelectable;
@@ -20,8 +19,6 @@ public class CommandButtonsPresenter : MonoBehaviour
         _model.OnCommandCancel += _view.UnblockAllInteractions;
         _model.OnCommandAccepted += _view.BlockInteractions;
 
-        //_selectable.OnNewValue += OnNewValue;
-        //OnNewValue(_selectable.CurrentValue);
         _selectedValues.Subscribe(OnNewValue);
     }
 
@@ -44,7 +41,9 @@ public class CommandButtonsPresenter : MonoBehaviour
         {
             var commandExecutors = new List<ICommandExecutor>();
             commandExecutors.AddRange((selectable as Component).GetComponentsInParent<ICommandExecutor>());
-            _view.MakeLayout(commandExecutors);
+
+            var queue = (selectable as Component).GetComponentInParent<ICommandsQueue>();
+            _view.MakeLayout(commandExecutors, queue);
         }
     }
 }

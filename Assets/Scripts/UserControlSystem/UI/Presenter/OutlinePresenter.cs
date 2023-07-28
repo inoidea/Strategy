@@ -6,7 +6,6 @@ using Zenject;
 
 public class OutlinePresenter : MonoBehaviour
 {
-    //[SerializeField] private SelectableValue _selectable;
     [Inject] private IObservable<ISelecatable> _selectedValues;
 
     private Outline[] _outlineSelectors;
@@ -14,9 +13,6 @@ public class OutlinePresenter : MonoBehaviour
 
     private void Start()
     {
-        //_selectable.OnNewValue += OnNewValue;
-        //OnNewValue(_selectable.CurrentValue);
-
         _selectedValues.Subscribe(OnNewValue);
     }
 

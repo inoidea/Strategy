@@ -16,3 +16,4 @@ MonoBehaviour:
   _groundClicksRMB: {fileID: 11400000, guid: c48a265d68a15fc49a97224d22a704be, type: 2}
   _attackableClicksRMB: {fileID: 11400000, guid: 38606f32b3234ec4c8cf3329f5d77952, type: 2}
   _selectables: {fileID: 11400000, guid: 645f64d5cdeef3345a8cad65b90681be, type: 2}
+  _chomperSprite: {fileID: 21300000, guid: f7409d6a91144354bb70f81e910e5c75, type: 3}

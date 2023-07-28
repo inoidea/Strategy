@@ -59,18 +59,22 @@
     <Compile Include="Assets\Scripts\Abstractions\IProduceUnitCommand.cs" />
     <Compile Include="Assets\Scripts\Abstractions\IAttackable.cs" />
     <Compile Include="Assets\Scripts\Abstractions\ICommandExecutor.cs" />
+    <Compile Include="Assets\Scripts\Abstractions\IUnitProducer.cs" />
     <Compile Include="Assets\Scripts\Abstractions\IMoveCommand.cs" />
     <Compile Include="Assets\Scripts\Abstractions\IHealthHolder.cs" />
     <Compile Include="Assets\Scripts\Abstractions\ITimeModel.cs" />
-    <Compile Include="Assets\Scripts\Abstractions\CommandExecutorBase.cs" />
     <Compile Include="Assets\Scripts\Abstractions\ICommand.cs" />
+    <Compile Include="Assets\Scripts\Abstractions\StatelessScriptableObjectValueBase.cs" />
     <Compile Include="Assets\Scripts\Abstractions\IAttackCommand.cs" />
     <Compile Include="Assets\Scripts\Abstractions\ISelecatable.cs" />
+    <Compile Include="Assets\Scripts\Abstractions\IIconHolder.cs" />
+    <Compile Include="Assets\Scripts\Abstractions\IUnitProductionTask.cs" />
+    <Compile Include="Assets\Scripts\Abstractions\StatefulScriptableObjectValueBase.cs" />
     <Compile Include="Assets\Scripts\Abstractions\IPatrolCommand.cs" />
     <Compile Include="Assets\Scripts\Abstractions\ScriptableObjectValueBase.cs" />
     <Compile Include="Assets\Scripts\Abstractions\IStopCommand.cs" />
-    <Compile Include="Assets\Scripts\Abstractions\StatefulScriptableObjectValueBase.cs" />
-    <Compile Include="Assets\Scripts\Abstractions\StatelessScriptableObjectValueBase.cs" />
+    <Compile Include="Assets\Scripts\Abstractions\ICommandsQueue.cs" />
+    <Compile Include="Assets\Scripts\Abstractions\ISetRallyPointCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Abstractions\Abstractions.asmdef" />

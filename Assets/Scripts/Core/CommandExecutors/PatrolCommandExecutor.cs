@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using System.Threading.Tasks;
+using UnityEngine;
 
 public class PatrolCommandExecutor : CommandExecutorBase<IPatrolCommand>
 {
-    public override void ExecuteSpecificCommand(IPatrolCommand command)
+    public override async Task ExecuteSpecificCommand(IPatrolCommand command)
     {
         Debug.Log($"{name} patrols points {command.From} to {command.To}!");
     }

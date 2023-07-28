@@ -1,7 +1,7 @@
 using UnityEngine;
 
-public class MainBuilding : CommandExecutorBase<IProduceUnitCommand>, ISelecatable, IAttackable
-{
+public class MainBuilding : MonoBehaviour, ISelecatable, IAttackable
+{ 
     [SerializeField] private Transform _unitsParent;
     [SerializeField] private float _maxHealth = 1000;
     [SerializeField] private Sprite _icon;
@@ -13,9 +13,5 @@ public class MainBuilding : CommandExecutorBase<IProduceUnitCommand>, ISelecatab
     public float MaxHealth => _maxHealth;
     public Sprite Icon => _icon;
     public Transform PivotPoint => _pivotPoint;
-
-    public override void ExecuteSpecificCommand(IProduceUnitCommand command)
-    {
-        Instantiate(command.UnitPrefab, new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity, _unitsParent);
-    }
+    public Vector3 RallyPoint { get; set; }
 }

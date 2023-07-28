@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\BottomLefPresenter.cs" />
     <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\MenuPresenter.cs" />
     <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\TopPanelPresenter.cs" />
+    <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\BottomCenterPresenter.cs" />
     <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\OutlinePresenter.cs" />
     <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\MouseInteractionsPresenter.cs" />
     <Compile Include="Assets\Scripts\UserControlSystem\UI\Presenter\CommandButtonsPresenter.cs" />

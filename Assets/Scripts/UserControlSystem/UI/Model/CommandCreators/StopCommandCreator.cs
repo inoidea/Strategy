@@ -7,6 +7,6 @@ public class StopCommandCreator : CommandCreatorBase<IStopCommand>
 
     protected override void ClassSpecificCommandCreation(Action<IStopCommand> creationCallback)
     {
-        creationCallback?.Invoke(_context.Inject(new StopCommand()));
+        creationCallback?.Invoke(_context.Inject(new StopCommandCopy()));
     }
 }

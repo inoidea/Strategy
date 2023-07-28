@@ -57,14 +57,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Core\CommandExecutors\AttackCommandExecutor.cs" />
+    <Compile Include="Assets\Scripts\Core\UnitProductionTask.cs" />
     <Compile Include="Assets\Scripts\Core\UnitMovementStop.cs" />
     <Compile Include="Assets\Scripts\Core\CommandExecutors\PatrolCommandExecutor.cs" />
     <Compile Include="Assets\Scripts\Core\TimeModel.cs" />
-    <Compile Include="Assets\Scripts\Core\MainBuilding.cs" />
+    <Compile Include="Assets\Scripts\Core\MainBuilding\MainBuilding.cs" />
     <Compile Include="Assets\Scripts\Core\CommandExecutors\StopCommandExecutor.cs" />
+    <Compile Include="Assets\Scripts\Core\CommandExecutors\ProduceUnitCommandExecutor.cs" />
     <Compile Include="Assets\Scripts\Core\CommandExecutors\MoveCommandExecutor.cs" />
     <Compile Include="Assets\Scripts\Core\CoreInstaller.cs" />
-    <Compile Include="Assets\Scripts\Core\Unit.cs" />
+    <Compile Include="Assets\Scripts\Core\Chomper\Unit.cs" />
+    <Compile Include="Assets\Scripts\Core\CommandExecutors\CommandExecutorBase.cs" />
+    <Compile Include="Assets\Scripts\Core\Chomper\ChomperCommandsQueue.cs" />
+    <Compile Include="Assets\Scripts\Core\MainBuilding\MainBuildingCommandQueue.cs" />
+    <Compile Include="Assets\Scripts\Core\StopCommandCopy.cs" />
+    <Compile Include="Assets\Scripts\Core\CommandExecutors\CommandExecutorsInstaller.cs" />
+    <Compile Include="Assets\Scripts\Core\CommandExecutors\SetRallyPointCommandExecutor.cs" />
+    <Compile Include="Assets\Scripts\Core\StopAwaiter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Core\Core.asmdef" />
@@ -768,6 +777,10 @@
     <ProjectReference Include="Zenject.csproj">
       <Project>{E87552AA-F639-666A-E904-B925EDB689DC}</Project>
       <Name>Zenject</Name>
+    </ProjectReference>
+    <ProjectReference Include="UserControlSystem.csproj">
+      <Project>{D940C225-BF1D-D016-B4D7-1FA8650A15A4}</Project>
+      <Name>UserControlSystem</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

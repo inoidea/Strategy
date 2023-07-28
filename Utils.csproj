@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Utils\UniRxExtensions.cs" />
     <Compile Include="Assets\Scripts\Utils\AssetsInjector\AssetsInjector.cs" />
     <Compile Include="Assets\Scripts\Utils\AsyncExtensions.cs" />
     <Compile Include="Assets\Scripts\Utils\IAwaitable.cs" />
@@ -63,7 +64,7 @@
     <Compile Include="Assets\Scripts\Utils\IAwaiter.cs" />
     <Compile Include="Assets\Scripts\Utils\AssetsInjector\InjectAssetAttribute.cs" />
     <Compile Include="Assets\Scripts\Utils\AwaiterBase.cs" />
-    <Compile Include="Assets\Scripts\Utils\UniRxExtensions.cs" />
+    <Compile Include="Assets\Scripts\Utils\CollisionDetector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Utils\Utils.asmdef" />
