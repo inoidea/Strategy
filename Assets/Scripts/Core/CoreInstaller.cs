@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using Zenject;
-using Zenject.Asteroids;
 
 public class CoreInstaller : MonoInstaller
 {

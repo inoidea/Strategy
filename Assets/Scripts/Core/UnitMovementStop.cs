@@ -31,12 +31,14 @@ public class UnitMovementStop : MonoBehaviour, IAwaitable<AsyncExtensions.Void>
             }
 
             return true;
-        }).Subscribe(_ =>
+        })
+        .Subscribe(_ =>
         {
             _agent.isStopped = true;
             _agent.ResetPath();
             OnStop?.Invoke();
-        }).AddTo(this);
+        })
+        .AddTo(this);
 
     }
 

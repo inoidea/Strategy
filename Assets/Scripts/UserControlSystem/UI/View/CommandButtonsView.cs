@@ -31,8 +31,7 @@ public class CommandButtonsView : MonoBehaviour
     public void BlockInteractions(ICommandExecutor ce)
     {
         UnblockAllInteractions();
-        GetButtonGameObjectByType(ce.GetType())
-        .GetComponent<Selectable>().interactable = false;
+        GetButtonGameObjectByType(ce.GetType()).GetComponent<Selectable>().interactable = false;
     }
 
     public void UnblockAllInteractions() => SetInteractible(true);
